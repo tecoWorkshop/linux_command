@@ -25,7 +25,7 @@ when には 'never', 'auto', 'always'(default) が入る
 -t, --sort=time  
 タイムスタンプの新しい順にソートして表示する
 
--S. --sort=size  
+-S, --sort=size  
 サイズ順にソートして表示する
 
 -r, --reverse  
