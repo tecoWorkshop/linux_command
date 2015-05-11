@@ -3,9 +3,37 @@
 
 
 ## ls
-~説明~
+list directory contents
+
+ファイルやディレクトリの情報を表示する
+
 ### 構文
+
+    ls [OPTION]... [FILE]...
+
 ### オプション
+-a, --all  
+ドットファイルを含む全てのファイルを表示する
+
+-l  
+詳細を表示する
+
+--color[=when]  
+色付けして表示する  
+when には 'never', 'auto', 'always'(default) が入る
+
+-t, --sort=time  
+タイムスタンプの新しい順にソートして表示する
+
+-S. --sort=size  
+サイズ順にソートして表示する
+
+-r, --reverse  
+ソート順を逆にする
+
+-h, --human-readable  
+-l オプションを使用したときに、サイズを読みやすいフォーマットで表示する
+
 
 ## cd
 ~説明~
