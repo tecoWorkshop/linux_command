@@ -65,9 +65,22 @@ Change  the current directory to dir.
 
 
 ## mkdir
-~説明~
+make directories
+
+ディレクトリを作成する
+
 ### 構文
+
+        mkdir [OPTION]... DIRECTORY...
+
 ### オプション
+
+-m, --mode  
+ディレクトリのパーミッションを設定する
+
+-p, --parents  
+必要に応じて親ディレクトリも作成する  
+ツリー状に作成できる
 
 ## cp
 ~説明~
