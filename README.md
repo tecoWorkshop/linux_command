@@ -83,9 +83,42 @@ make directories
 ツリー状に作成できる
 
 ## cp
-~説明~
+copy files and directories
+
+ファイルやディレクトリをコピーする
+
 ### 構文
+
+        cp [OPTION]... [-T] SOURCE DEST
+        cp [OPTION]... SOURCE... DIRECTORY
+        cp [OPTION]... -t DIRECTORY SOURCE...
+
 ### オプション
+
+-b, --backup  
+上書きされるファイルのバックアップを作成する
+
+-f, --force  
+強制的に上書きする
+
+-i, --interactive  
+上書きするかを問い合わせる
+
+-l, --link  
+コピーする代わりにハードリンクを作る
+
+-s, --symbolic-link  
+コピーする代わりにシンボリックリンクを作る
+
+-p, --preserve  
+パーミッション、オーナー情報、タイムスタンプを保持したままコピーする
+
+-r, --recursive  
+ディレクトリを再帰的にコピーする
+
+
+
+
 
 ## mv
 ~説明~
