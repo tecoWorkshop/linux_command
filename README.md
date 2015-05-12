@@ -36,9 +36,33 @@ when には 'never', 'auto', 'always'(default) が入る
 
 
 ## cd
-~説明~
+Change  the current directory to dir.
+
+ディレクトリを移動する
+
 ### 構文
-### オプション
+
+        cd [dir]
+
+### Tips
+
+ルートディレクトリ
+
+        $ cd /
+
+親ディレクトリ
+
+        $ cd ../
+
+ホームディレクトリ
+
+        $ cd ~/
+        $ cd
+
+ひとつ前にいたディレクトリ
+
+        $ cd -
+
 
 ## mkdir
 ~説明~
