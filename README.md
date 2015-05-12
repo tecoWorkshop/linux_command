@@ -116,19 +116,58 @@ copy files and directories
 -r, --recursive  
 ディレクトリを再帰的にコピーする
 
-
-
-
-
 ## mv
-~説明~
+move files
+
+ファイルやディレクトリを移動する
+
 ### 構文
+
+        mv [OPTION] SOURCE TARGET
+        mv [OPTION] SOURCE ... DIRECTORY
+     
 ### オプション
 
+-b, --backup  
+上書きされるファイルのバックアップを作成する
+
+-f, --force  
+強制的に上書きする
+
+-i, --interactive  
+上書きするかを問い合わせる
+
+-u, --update
+同名のファイルの場合，タイム・スタンプを比較し同じまたは新しいときには移動を行わない
+
+-v, --verbose
+移動の前にファイル名を表示する
+    
 ## rm
-~説明~
+remove directory entries
+
+ファイルやディレクトリを削除する
+
 ### 構文
+
+        rm [-OPTION] FILE
+
 ### オプション
+
+-d, --directory
+ディレクトリごと削除できる。スーパーユーザーのみ使用が可能
+    
+-f, --force
+警告メッセージを表示しない
+      
+-i, --interactive
+ファイルを削除してよいかを問い合わせる
+  
+-r, -R, --recursive
+ディレクトリ内を再帰的に削除する
+  
+-v, --verbose
+ファイルを削除する前にファイル名を表示する
 
 ## chmod
 ~説明~
