@@ -179,10 +179,32 @@ remove directory entries
 ### 構文
 ### オプション
 
-## less  iida
-~説明~
+## less
+opposite of more
+
+ファイルの内容をページ単位で自由に閲覧できる。
+
 ### 構文
+
+        less [filename]...
+
 ### オプション
+
+-N, --LINE-NUMBERS  
+行番号を表示する。
+遅くなる。
+
+\+  
+起動時に実行するコマンドを指定できる。
+
+    +G  
+    起動時に最終行へ移動する。  
+    +F  
+    起動時にtailモードにする。  
+
+### 備考
+カラー表示に対応させる。  
+http://qiita.com/makisyu/items/a8c4231a95d92f02b73a
 
 ## grep  uraki
 ~説明~
