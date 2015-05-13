@@ -169,67 +169,67 @@ remove directory entries
 -v, --verbose
 ファイルを削除する前にファイル名を表示する
 
-## chmod
+## chmod  ikeda
 ~説明~
 ### 構文
 ### オプション
 
-## ps
+## ps  ono
 ~説明~
 ### 構文
 ### オプション
 
-## less
+## less  iida
 ~説明~
 ### 構文
 ### オプション
 
-## grep
+## grep  uraki
 ~説明~
 ### 構文
 ### オプション
 
-## tail head
+## tail head  ikeda
 ~説明~
 ### 構文
 ### オプション
 
-## cat
+## cat  ono
 ~説明~
 ### 構文
 ### オプション
 
-## top
+## top  iida
 ~説明~
 ### 構文
 ### オプション
 
-## find
+## find  uraki
 ~説明~
 ### 構文
 ### オプション
 
-## df
+## df  ikeda
 ~説明~
 ### 構文
 ### オプション
 
-## | パイプ
+## | パイプ  ono
 ~説明~
 ### 構文
 ### オプション
 
-## diff
+## diff  iida
 ~説明~
 ### 構文
 ### オプション
 
-## sed
+## sed  uraki
 ~説明~
 ### 構文
 ### オプション
 
-## awk
+## awk  ikeda
 ~説明~
 ### 構文
 ### オプション
