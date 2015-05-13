@@ -184,7 +184,7 @@ remove directory entries
 ### 構文
 ### オプション
 
-## grep  uraki
+## grep  urakikkkkk
 ~説明~
 ### 構文
 ### オプション
