@@ -206,10 +206,39 @@ opposite of more
 カラー表示に対応させる。  
 http://qiita.com/makisyu/items/a8c4231a95d92f02b73a
 
-## grep  uraki
-~説明~
+## grep
+searching plain-text data sets for lines matching a regular expression.  
+Its name comes from the ed command g/re/p (globally search a regular expression and print).
+
+テキストファイル中から、検索パターンに一致する行を検索。  
+検索パターンには、正規表現も使用可能。
+
 ### 構文
+
+        grep [OPTION] PATTERN [FILE]
+
 ### オプション
+
+-r  
+ディレクトリを再帰的にたどって検索する。
+
+-c  
+検索にヒットする行数を取得。
+
+-n  
+行番号を追加。
+
+-i  
+大文字小文字を区別しない。
+
+-v  
+特定の文字列を持つ行を除外する。
+
+-l  
+マッチしたファイルのファイル名のみを出力する。
+
+-L  
+マッチしなかったファイルのファイル名を出力する。
 
 ## tail head  ikeda
 ~説明~
