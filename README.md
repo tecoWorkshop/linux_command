@@ -219,25 +219,25 @@ Its name comes from the ed command g/re/p (globally search a regular expression 
 
 ### オプション
 
--c  
+**-c**, **--count**  
 検索にヒットする行数を取得。
 
--i  
+**-i**, **--ignore-case**  
 大文字小文字を区別しない。
 
--l  
+**-l**, **--files-with-matches**  
 マッチしたファイルのファイル名のみを出力する。
 
--L  
+**-L**, **--files-without-match**  
 マッチしなかったファイルのファイル名を出力する。
 
--n  
+**-n**, **--line-number**  
 行番号を追加。
 
--r  
+**-r**, **--recursive**  
 ディレクトリを再帰的にたどって検索する。
 
--v  
+**-v**, **--invert-match**  
 特定の文字列を持つ行を除外する。
 
 ## tail head  ikeda
@@ -370,41 +370,41 @@ searches through one or more directory trees of a file system, locates files bas
 
 ### 構文
 
-        grep [PATH] [OPTION] [EXPRESSION]
+        find [PATH] [OPTION] [EXPRESSION]
 
 ### オプション
 
--atime n  
+**-atime** n  
 最終アクセス時刻がn日前。
 
--anewer file  
+**-anewer** file  
 指定されたファイルの更新時刻よりも後にアクセスされたファイル。
 
--ctime n  
+**-ctime** n  
 ファイル名、ファイルサイズ、パーミッション、リンク数、オーナー、グループなどの最終変更時刻がn日前。
 
--cnewer file  
+**-cnewer** file  
 指定されたファイルの更新時刻よりも後に変更されたファイル。
 
--empty  
+**-empty**  
 ファイルまたはディレクトリが空。
 
--mtime n  
+**-mtime** n  
 最終更新時刻がn日前。
 
--newer file  
+**-newer** file  
 指定されたファイルの最終更新時刻よりも後に変更されたファイル。
 
--name pattern  
+**-name** pattern  
 ファイル名が指定されたパターンに一致。
 
--perm mode  
+**-perm** mode  
 許可属性がmodeであるファイル。
 
--size n[ck]  
+**-size** n[ck]  
 ファイルサイズがn。nの後にcを付加するとバイト単位、kを付加するとキロバイト単位。
 
--type filetype  
+**-type** filetype  
 指定されたタイプのファイル。指定可能なタイプ種別は以下。
 
     b  ブロック型特殊ファイル（バッファ付き）
@@ -415,24 +415,24 @@ searches through one or more directory trees of a file system, locates files bas
     l  シンボリック・リンク
     s  ソケット
 
--user uname  
+**-user** uname  
 指定されたユーザーが所有者ならば真を返します。
 
 ### アクション
 
--exec command {} \;  
+**-exec** command {} \;  
 検索後，commandを実行する。commandの後に{}を指定すると，検索したファイル名に置き換わり、command引数となる。
 
--fprint file  
+**-fprint** file  
 検索結果をfileに書き出す。同名のファイルがある場合は上書きをする。
 
--ls  
+**-ls**  
 検索結果を "ls -dils" と同様な書式で表示。
 
--ok command \;  
+**-ok** command \;  
 -execと同様に検索後commandを実行するが、都度、ユーザーに問い合わせる。
 
--print  
+**-print**  
 検索結果をフルパスで標準出力する。
 
 ## df  ikeda
@@ -450,10 +450,32 @@ searches through one or more directory trees of a file system, locates files bas
 ### 構文
 ### オプション
 
-## sed  uraki
-~説明~
+## sed
+sed (stream editor) is a Unix utility that parses and transforms text, using a simple, compact programming language.
+
+文字列フィルタリング、変換用のストリームエディタ
+
 ### 構文
+
+        sed [OPTION] [FILE]
+
 ### オプション
+
+**-e** script, **--expression**=script  
+指定されたコマンドを適用。
+
+**-f** script-file, **--file**=script-file  
+指定されたファイルに記述されたコマンド列を適用。
+
+
+### コマンド
+
+**s/ regexp / replacement /[g]**  
+regexp（置換条件）でreplacement（対象文字列）を置換する。  
+gを付加した場合、regexpに該当する、すべてのreplacementを置換する。
+
+1,n **d**  
+1行目からn行目を削除する。
 
 ## awk  ikeda
 ~説明~
