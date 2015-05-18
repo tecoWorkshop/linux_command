@@ -219,26 +219,26 @@ Its name comes from the ed command g/re/p (globally search a regular expression 
 
 ### オプション
 
--r  
-ディレクトリを再帰的にたどって検索する。
-
 -c  
 検索にヒットする行数を取得。
 
--n  
-行番号を追加。
-
 -i  
 大文字小文字を区別しない。
-
--v  
-特定の文字列を持つ行を除外する。
 
 -l  
 マッチしたファイルのファイル名のみを出力する。
 
 -L  
 マッチしなかったファイルのファイル名を出力する。
+
+-n  
+行番号を追加。
+
+-r  
+ディレクトリを再帰的にたどって検索する。
+
+-v  
+特定の文字列を持つ行を除外する。
 
 ## tail head  ikeda
 ~説明~
@@ -363,10 +363,77 @@ Linux カーネルが現在管理しているタスクの一覧だけでなく�
         N : 正のnice値を持つプロセス
         W : スワップアウトされたプロセス
 
-## find  uraki
-~説明~
+## find
+searches through one or more directory trees of a file system, locates files based on some user-specified criteria and applies a user-specified action on each matched file.
+
+指定されたディレクトリ以下の階層から、与えられた条件に適合するファイルを検索
+
 ### 構文
+
+        grep [PATH] [OPTION] [EXPRESSION]
+
 ### オプション
+
+-atime n  
+最終アクセス時刻がn日前。
+
+-anewer file  
+指定されたファイルの更新時刻よりも後にアクセスされたファイル。
+
+-ctime n  
+ファイル名、ファイルサイズ、パーミッション、リンク数、オーナー、グループなどの最終変更時刻がn日前。
+
+-cnewer file  
+指定されたファイルの更新時刻よりも後に変更されたファイル。
+
+-empty  
+ファイルまたはディレクトリが空。
+
+-mtime n  
+最終更新時刻がn日前。
+
+-newer file  
+指定されたファイルの最終更新時刻よりも後に変更されたファイル。
+
+-name pattern  
+ファイル名が指定されたパターンに一致。
+
+-perm mode  
+許可属性がmodeであるファイル。
+
+-size n[ck]  
+ファイルサイズがn。nの後にcを付加するとバイト単位、kを付加するとキロバイト単位。
+
+-type filetype  
+指定されたタイプのファイル。指定可能なタイプ種別は以下。
+
+    b  ブロック型特殊ファイル（バッファ付き）
+    c  キャラクタ型特殊ファイル（バッファなし）
+    d  ディレクトリ
+    p  名前付きパイプ（FIFO）
+    f  通常のファイル
+    l  シンボリック・リンク
+    s  ソケット
+
+-user uname  
+指定されたユーザーが所有者ならば真を返します。
+
+### アクション
+
+-exec command {} \;  
+検索後，commandを実行する。commandの後に{}を指定すると，検索したファイル名に置き換わり、command引数となる。
+
+-fprint file  
+検索結果をfileに書き出す。同名のファイルがある場合は上書きをする。
+
+-ls  
+検索結果を "ls -dils" と同様な書式で表示。
+
+-ok command \;  
+-execと同様に検索後commandを実行するが、都度、ユーザーに問い合わせる。
+
+-print  
+検索結果をフルパスで標準出力する。
 
 ## df  ikeda
 ~説明~
