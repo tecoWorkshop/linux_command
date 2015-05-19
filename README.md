@@ -555,10 +555,31 @@ report file system disk space usage
     Mounted on : マウント位置
 ```
 
-## | パイプ  ono
-~説明~
+## | パイプ
+
+コマンドとコマンドを(パイプ|で)つなぎ、前のコマンドの出力を後ろのコマンドの標準入力とすることができる
+
 ### 構文
+
+[command] | [command]
+
 ### オプション
+
+ありますか？
+
+### Tips
+
+        $ ls -l /usr/bin
+
+→だと表示しきれないけど
+
+        $ ls -l /usr/bin | less
+
+→ページ単位で見ることができる
+
+        $ ls -l /usr/bin | grep hoge
+
+→'hoge'という言葉で絞り込んで確認する 
 
 ## diff  iida
 ~説明~
