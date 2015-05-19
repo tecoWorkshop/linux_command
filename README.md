@@ -278,10 +278,43 @@ Its name comes from the ed command g/re/p (globally search a regular expression 
 **-v**, **--invert-match**  
 特定の文字列を持つ行を除外する。
 
-## tail head  ikeda
-~説明~
+## head
+output the first part of files
+
+ファイルの先頭部分を表示する
+
 ### 構文
+
+        head [OPTION]... [FILE]...
+
 ### オプション
+
+-c, --bytes=K  
+ファイルの先頭から K バイトを表示する
+
+-n, --lines=K  
+ファイルの先頭から K 行を表示する
+
+## tail
+output the last part of files
+
+ファイルの末尾部分を表示する
+
+### 構文
+
+        tail [OPTION]... [FILE]...
+
+### オプション
+
+-c, --bytes=K  
+ファイルの末尾から K バイトを表示する
+
+-n, --lines=K  
+ファイルの末尾から K 行を表示する
+
+-f, --follow  
+ファイルの内容を監視し、表示を更新する  
+ログの監視に便利
 
 ## cat  ono
 ~説明~
