@@ -137,10 +137,10 @@ move files
 -i, --interactive  
 上書きするかを問い合わせる
 
--u, --update
+-u, --update  
 同名のファイルの場合，タイム・スタンプを比較し同じまたは新しいときには移動を行わない
 
--v, --verbose
+-v, --verbose  
 移動の前にファイル名を表示する
     
 ## rm
@@ -154,19 +154,19 @@ remove directory entries
 
 ### オプション
 
--d, --directory
+-d, --directory  
 ディレクトリごと削除できる。スーパーユーザーのみ使用が可能
     
--f, --force
+-f, --force  
 警告メッセージを表示しない
       
--i, --interactive
+-i, --interactive  
 ファイルを削除してよいかを問い合わせる
   
--r, -R, --recursive
+-r, -R, --recursive  
 ディレクトリ内を再帰的に削除する
   
--v, --verbose
+-v, --verbose  
 ファイルを削除する前にファイル名を表示する
 
 ## chmod
@@ -212,10 +212,42 @@ x : 実行権限
 777 : rwxrwxrwx  
 644 : rw_r__r__
 
-## ps  ono
-~説明~
+## ps
+
+report a snapshot of the current processes
+
+実行中のプロセスを表示する
+
 ### 構文
+
+    ps [options]
+
 ### オプション
+
+u, -u  
+ユーザー名と開始時刻を表示
+
+l, -l  
+詳細なフォーマットで表示
+
+x, -x  
+制御端末(TTY)のないプロセスも表示
+
+a, -a  
+全てのユーザーのプロセスを表示
+
+f, -f, --forest  
+プロセスの親子関係をツリー状に表示
+
+### 例文
+
+全ユーザーのプロセスをユーザー名つきで表示
+
+    $ ps aux
+
+sshdに関係あるプロセスのみ表示(パイプ参照)
+
+    $ ps auxf | grep sshd
 
 ## less
 opposite of more
@@ -316,10 +348,30 @@ output the last part of files
 ファイルの内容を監視し、表示を更新する  
 ログの監視に便利
 
-## cat  ono
-~説明~
+## cat
+concatenate files and print on the standard output
+
+ファイルの内容を表示する
+
 ### 構文
+
+    cat [OPTION]... [FILE]...
+
+※ファイルは複数指定可能
+
 ### オプション
+
+-n, --number  
+行番号を表示する
+
+-b, --number-nonblank  
+空白行をスキップして、行番号を表示する。-nより優先される
+
+-s, --squeeze-blank  
+連続した空白行を短縮して出力する
+
+-T, --show-tabs  
+タブ文字を表示する
 
 ## top
 display and update information about the top cpu processes
@@ -556,11 +608,9 @@ report file system disk space usage
 ```
 
 ## | パイプ
-
-コマンドとコマンドを(パイプ|で)つなぎ、前のコマンドの出力を後ろのコマンドの標準入力とすることができる
+コマンドとコマンドを(| パイプで)つなぎ、前のコマンドの出力を後ろのコマンドの標準入力とすることができる
 
 ### 構文
-
 [command] | [command]
 
 ### オプション
@@ -569,17 +619,17 @@ report file system disk space usage
 
 ### Tips
 
+画面に出力が入りきらないので...
+
         $ ls -l /usr/bin
 
-→だと表示しきれないけど
+ページ単位で見る
 
         $ ls -l /usr/bin | less
 
-→ページ単位で見ることができる
+'sshd'で絞り込んでプロセスを確認する
 
-        $ ls -l /usr/bin | grep hoge
-
-→'hoge'という言葉で絞り込んで確認する 
+        $ ps auxf | grep sshd
 
 ## diff  iida
 ~説明~
