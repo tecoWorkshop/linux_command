@@ -551,6 +551,7 @@ report file system disk space usage
     Size : サイズ
     Used : 使用量
     Avail : 使用可能量
+    Use% : 使用率
     Mounted on : マウント位置
 ```
 
