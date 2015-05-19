@@ -506,10 +506,53 @@ searches through one or more directory trees of a file system, locates files bas
 **-print**  
 検索結果をフルパスで標準出力する。
 
-## df  ikeda
-~説明~
+## df
+report file system disk space usage
+
+ファイルシステムディスク容量を表示する
+
 ### 構文
+
+        df [OPTION]... [FILE]...
+
 ### オプション
+
+-a, --all  
+ダミーを含む全てのファイルシステムを表示する
+
+-B, --block-size=SIZE  
+指定したブロックサイズで表示する  
+  -BM : 1Mbyte 単位で表示  
+  --block-size=1024 : 1Kbyte 単位で表示
+
+-h, --human-readable  
+サイズを読みやすいフォーマットで表示する
+
+-l, --local  
+ローカルのファイルシステムのみを表示する
+
+-t, --type=TYPE  
+指定したタイプのファイルシステムのみを表示する（例：ext3 ext4）
+
+### 表示の見かた
+```
+    $ df -h
+```
+```
+    Filesystem               Size  Used Avail Use% Mounted on
+    /dev/mapper/centos-root   39G   12G   28G  30% /
+    devtmpfs                 220M     0  220M   0% /dev
+    tmpfs                    229M     0  229M   0% /dev/shm
+    tmpfs                    229M  4.3M  225M   2% /run
+    tmpfs                    229M     0  229M   0% /sys/fs/cgroup
+    /dev/sda1                497M  184M  314M  37% /boot
+    
+    Filesystem : ファイルシステム
+    Size : サイズ
+    Used : 使用量
+    Avail : 使用可能量
+    Mounted on : マウント位置
+```
 
 ## | パイプ  ono
 ~説明~
